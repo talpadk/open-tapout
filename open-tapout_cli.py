@@ -6,7 +6,33 @@ from time import sleep
 console = tapinout(debug=True, showPackages=False)
 lastState = None
 
-knownModels = {'A032': 'Tamron SP 24-70mm F/2.8 Di VC USD G2'}
+# Ref: https://www.tamron.com/global/consumer/support/download/firmware/
+knownModels = {
+    # APS-C format DSLR (Di II)
+    'B016': 'Tamron 16-300mm F/3.5-6.3 Di II VC PZD MACRO',
+    'B023': 'Tamron 10-24mm F/3.5-4.5 Di II VC HLD',
+    'B028': 'Tamron 18-400mm F/3.5-6.3 Di II VC HLD',
+
+    # Full-frame format DSLR (Di)
+    'A009': 'Tamron SP 70-200mm F/2.8 Di VC USD',
+    'A010': 'Tamron 28-300mm F/3.5-6.3 Di VC PZD',
+    'A011': 'Tamron SP 150-600mm F/5-6.3 Di VC USD',
+    'A012': 'Tamron SP 15-30mm F/2.8 Di VC USD',
+    'A022': 'Tamron SP 150-600mm F/5-6.3 Di VC USD G2',
+    'A025': 'Tamron SP 70-200mm F/2.8 Di VC USD G2',
+    'A030': 'Tamron SP 70-300mm F/4-5.6 Di VC USD (Tungsten Silver Ring Design)',
+    'A032': 'Tamron SP 24-70mm F/2.8 Di VC USD G2',
+    'A034': 'Tamron 70-210mm F/4 Di VC USD',
+    'A035': 'Tamron 100-400mm F/4.5-6.3 Di VC USD',
+    'A037': 'Tamron 17-35mm F/2.8-4 Di OSD',
+    'A041': 'Tamron SP 15-30mm F/2.8 Di VC USD G2',
+    'F004': 'Tamron SP 90mm F/2.8 Di MACRO 1:1 VC USD',
+    'F012': 'Tamron SP 35mm F/1.8 Di VC USD',
+    'F013': 'Tamron SP 45mm F/1.8 Di VC USD',
+    'F016': 'Tamron SP 85mm F/1.8 Di VC USD',
+    'F017': 'Tamron SP 90mm F/2.8 Di MACRO 1:1 VC USD',
+    'F045': 'Tamron SP 35mm F/1.4 Di USD',
+}
 
 def printLensModel():
   global console, knownModels
